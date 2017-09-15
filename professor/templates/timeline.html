@@ -1,0 +1,65 @@
+
+<tr class="">
+	<td colspan="10">
+		<div class="hiddenRow">
+	        <div class="accordion-body collapse " id="demo{{solicitacao.id}}" >
+	        	<div class="timeline">
+	        		{% if solicitacao.professor_message%}
+	        		<div class="timeslot"  style="height:110px" >
+	        			<div class="task">
+	        				<span>
+								<span class="type">{{solicitacao.professor.nome}}:</span>
+								<span class="details">
+									{{solicitacao.professor_message}}
+								</span>
+								<span>
+								</span> 
+							</span>
+							<div class="arrow"></div>
+						</div>
+	        			<div class="icon"><i class="icon-envelope"></i></div>
+	        			<div class="time"></div>
+	        			
+	        		</div>
+	        		{%endif%}
+	        		{% if solicitacao.coapac_message%}
+	        		<div class="clearfix"></div>
+					<div class="timeslot alt" style="height:110px" >
+	        			<div class="task">
+	        				<span>
+								<span class="type">{% if solicitacao.coapac_message_author%}{{solicitacao.coapac_message_author.nome}}{%else%}Sistema{%endif%}:</span>
+								<span class="details">
+									{{solicitacao.coapac_message}}
+								</span>
+								<span>
+								</span> 
+							</span>
+							<div class="arrow"></div>
+						</div>
+	        			<div class="icon"><i class="icon-envelope"></i></div>
+	        			<div class="time"></div>
+	        		</div>
+	        		{%endif%}
+	        		{% if solicitacao.grafica_message%}
+	        		<div class="clearfix"></div>
+	        		<div class="timeslot"  style="height:110px" >
+	        			<div class="task">
+	        				<span>
+								<span class="type">{{solicitacao.grafica_message_author.nome}}:</span>
+								<span class="details">
+									{{solicitacao.grafica_message}}
+								</span>
+								<span>
+								</span> 
+							</span>
+							<div class="arrow"></div>
+						</div>
+	        			<div class="icon"><i class="icon-envelope"></i></div>
+	        			<div class="time"></div>
+	        		</div>
+	        		{%endif%}
+	        	</div>
+	        </div>
+        </div>
+    </td>
+</tr>
