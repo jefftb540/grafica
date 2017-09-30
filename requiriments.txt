@@ -1,1 +1,6 @@
-django-bootstrap3==7.0.1
+Django==1.11.5
+django-bootstrap3==9.0.0
+olefile==0.44
+Pillow==4.2.1
+pkg-resources==0.0.0
+pytz==2017.2
