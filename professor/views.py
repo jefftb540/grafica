@@ -217,11 +217,11 @@ def definirSenha(request, professorID):
 @login_required
 @permission_required('professor.add_usuario')
 def listarProfessores(request):
-	professores = Usuario.objects.filter(tipo="prof")
+	professores = Usuario.objects.filter(tipo="professor")
 	return render(request,'coapac/professor/listar.html', {'professores': professores})
 
 @login_required
 @permission_required('professor.add_usuario')
 def listarUsuarios(request):
-	usuarios = Usuario.objects.exclude(tipo='prof')
+	usuarios = Usuario.objects.exclude(tipo='professor')
 	return render(request,'coapac/usuario/listar.html', {'usuarios': usuarios})
