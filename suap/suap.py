@@ -94,7 +94,7 @@ class SuapBackend(ModelBackend):
                 user.id = usersuap['id']
                 user.email = usersuap['email']
                 user.nome = usersuap['nome_usual']
-                user.tipo = usersuap['tipo_vinculo'].lower()
+               #user.tipo = usersuap['tipo_vinculo'].lower()
                 user.save()
                 return user ##retorna um usuário salvo
             # Run the default password hasher once to reduce the timing

@@ -1,0 +1,1 @@
+/home/cti/grafica/grafica/urls.py
