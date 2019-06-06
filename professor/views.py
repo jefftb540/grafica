@@ -16,7 +16,7 @@ from django.contrib.auth import update_session_auth_hash
 @login_required
 def index(request):
 	solicitacoes = Solicitacao.objects.all().order_by('-id')
-	if(request.user.tipo == "prof"):
+	if(request.user.tipo == "professor"):
 		solicitacoes = solicitacoes.filter(professor = request.user)
 		return render(request, "solicitacao/listar.html", {'solicitacoes' : solicitacoes})
 	elif(request.user.tipo == "coapac"):
