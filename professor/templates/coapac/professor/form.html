@@ -13,13 +13,13 @@
 
 {% block extrascript %}
 	<script type="text/javascript">
-	if ($("#id_tipo").val()=="prof") {
+	if ($("#id_tipo").val()=="professor") {
 			$("#id_quantidade_maxima").parents('tr').show();
 		}else{
 			$("#id_quantidade_maxima").parents('tr').hide();
 		}
 	$("#id_tipo").change(function(){
-		if ($("#id_tipo").val()=="prof") {
+		if ($("#id_tipo").val()=="professor") {
 			$("#id_quantidade_maxima").parents('tr').show();
 		}else{
 			$("#id_quantidade_maxima").parents('tr').hide();
