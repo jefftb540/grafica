@@ -29,7 +29,7 @@ class Usuario(AbstractBaseUser, PermissionsMixin):
 	matricula = models.CharField(max_length=14,  unique=True)
 	quantidade_maxima = models.IntegerField(null=True, blank=True)
 	quantidade_atual = models.IntegerField(default=0)
-	tipo = models.CharField(max_length=7, choices=[['coapac','COAPAC'],['grafica','Grafica'],['professor','Professor']],default='professor')
+	tipo = models.CharField(max_length=9, choices=[['coapac','COAPAC'],['grafica','Grafica'],['professor','Professor']],default='professor')
 	#is_superuser = models.BooleanField(default=False)
 
 	@property
