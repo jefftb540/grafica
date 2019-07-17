@@ -38,8 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'professor',
-    'bootstrap3',
-    'zerar_totais'
+    'bootstrap3'
 ]
 
 MIDDLEWARE = [
