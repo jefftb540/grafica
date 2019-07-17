@@ -1,7 +1,6 @@
 from django.core.management.base import BaseCommand
 from django.utils import timezone
-from professor import models
-from models import Usuario
+from .models import Usuario
 
 
 class Command(BaseCommand):
