@@ -5,8 +5,7 @@ from models import Usuario
 
 class Command(BaseCommand):
     help = 'Zerar cotas dos professores'
-
     def handle(self, *args, **kwargs):
    		professores = Usuario.objects.filter(tipo="professor")
    		professores.update(quantidade_atual=0)
-    	professores.save()
+   		professores.save()
