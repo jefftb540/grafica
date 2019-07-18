@@ -11,6 +11,7 @@
 			<th>Quantidade de alunos</th>
 			<th>Quantidade total de folhas</th>
 			<th>Cota do professor</th>
+			<td>{% if solicitacao.frente_verso %}<span class="fas fa_check"></span>{%endif%}</td>
 			<th>Arquivo</th>
 			<th>Ações</th>
 
@@ -28,6 +29,7 @@
 			<td>{{solicitacao.totalAlunos}}</td>
 			<td>{{solicitacao.totalGeral}}</td>
 			<td>{{solicitacao.professor.quantidade_atual}}/{{solicitacao.professor.quantidade_maxima}}</td>
+			<td>{% if solicitacao.frente_verso %}<span class="fas fa_check"></span>{%endif%}</td>
 			<td>{% if solicitacao.arquivo %}
 			<a href="{{solicitacao.arquivo.url	}}" >Baixar Arquivo</a>
 			{% endif %}</td>
