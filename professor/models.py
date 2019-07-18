@@ -57,7 +57,7 @@ class Solicitacao(models.Model):
 	impresso = models.BooleanField(default=False)
 	aprovado = models.BooleanField(default=False)
 	pendente = models.BooleanField(default=True)
-	frente_verso = models.BooleanField(default=True)
+	frente_verso = models.BooleanField(default=True, verbose_name = "Frente e Verso")
 	data_solicitacao  = models.DateTimeField(editable=False, auto_now_add=True)
 	arquivo = models.FileField(null=True, blank=True)
 	professor_message = models.TextField(max_length=200, null=True, blank=True, verbose_name="Observação")
