@@ -7,6 +7,7 @@
 			<th>Data de solicitação</th>
 			<th>Descrição</th>
 			<th>Status</th>
+			<th>Frente e Verso</th>
 		</tr>
 	</thead>   
 	<tbody>
@@ -16,6 +17,7 @@
 			<td>{{solicitacao.data_solicitacao|date }}</td>
 			<td>{{solicitacao.descricao}}</td>
 			<td>{% if solicitacao.impresso %}<span class="label label-success">Impresso</span>{% endif%}{% if solicitacao.pendente %}<span class="label label-warning">Pendente</span>{% endif%}{% if solicitacao.aprovado and not solicitacao.impresso %}<span class="label label-info">Aprovado</span>{% endif%}{% if not solicitacao.aprovado and not solicitacao.pendente and not solicitacao.impresso%}<span class="label label-important">Negado</span>{% endif%}</span></td>
+			<td>{% if solicitacao.frente_verso %}<span class="fas fa_check"></span>{%endif%}</td>
 		</tr>
 		{% include 'timeline.html'%}
 	{%endfor%}
