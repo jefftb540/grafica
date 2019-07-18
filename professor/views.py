@@ -53,7 +53,7 @@ def entrar(request):
 
 
 
-solicitacaoForm = modelform_factory(Solicitacao, fields = ['descricao','totalFolhas','totalAlunos', 'arquivo', 'professor_message' ])
+solicitacaoForm = modelform_factory(Solicitacao, fields = ['descricao','totalFolhas','totalAlunos', 'arquivo', 'professor_message', 'frente_verso' ])
 @login_required
 @permission_required('professor.add_solicitacao')
 def novaSolicitacao(request):
