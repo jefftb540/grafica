@@ -2,7 +2,7 @@
 {% load bootstrap3 %}
 {% block conteudo %}
 <form method="post" enctype="multipart/form-data">{%csrf_token%}
-	{{form.as_table }}
+	{{form.as_table }}<br />
 	<button type="submit" class="btn btn-primary">Enviar</button>
 </form>
 {%endblock%}
