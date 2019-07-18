@@ -25,7 +25,6 @@ from django.conf import settings
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^index/', views.index, name='index'),
-    url(r'^', views.index, name='index'),
     url(r'^login', views.login),
     url(r'^logout$', auth.logout_then_login, name='logout'),
     url(r'^solicitacao/criar/', views.novaSolicitacao, name='criar_solicitacao'),
