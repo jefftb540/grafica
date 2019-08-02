@@ -27,10 +27,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['10.182.0.12', 'catarina.ifrn.local', '127.0.0.1']
 
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
-SECURE_SSL_REDIRECT = True
+
 
 # Application definition
 
