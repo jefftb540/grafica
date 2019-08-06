@@ -49,12 +49,12 @@ def get(target, oids, credentials, port=161, engine=hlapi.SnmpEngine(), context=
         context,
         *construct_object_types(oids)
     )
-    return fetch(handler, 1)[0]
+    return fetch(handler, 0)[0]
 
 def getTotalGeral():
 	total = 0  
 	for target in targets:
-		total += get(target,[oid], hlapi.CommunityData('public'))[0]
+		total += get(target,[oid], hlapi.CommunityData('public'))
 
 	totalGeral = Contagem.objects.latest('contagem') - total
 	return totalGeral
