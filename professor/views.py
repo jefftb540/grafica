@@ -45,7 +45,8 @@ def naoImpressas(request):
 @login_required
 def pendentes(request):
 	solicitacoes = Solicitacao.objects.all().order_by('-id')
-	return render(request, "coapac/solicitacao/pendentes.html", {'solicitacoes' : solicitacoes})
+	total = snmp.get('192.168.193.12',['.1.3.6.1.2.1.43.10.2.1.4.1.1'], hlapi.CommunityData('public'))
+	return render(request, "coapac/solicitacao/pendentes.html", {'solicitacoes' : solicitacoes, 'totalImpressoes' : total})
 
 
 def entrar(request):
@@ -227,3 +228,8 @@ def listarProfessores(request):
 def listarUsuarios(request):
 	usuarios = Usuario.objects.exclude(tipo='professor')
 	return render(request,'coapac/usuario/listar.html', {'usuarios': usuarios})
+
+
+
+
+
