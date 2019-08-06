@@ -46,7 +46,7 @@ def naoImpressas(request):
 @login_required
 def pendentes(request):
 	solicitacoes = Solicitacao.objects.all().order_by('-id')
-	total = snmp.getTotalGeral()
+	total = snmp.getTotalMes()
 	return render(request, "coapac/solicitacao/pendentes.html", {'solicitacoes' : solicitacoes, 'totalImpressoes' : total})
 
 

@@ -51,7 +51,7 @@ def get(target, oids, credentials, port=161, engine=hlapi.SnmpEngine(), context=
     )
     return fetch(handler, 1)
 
-def getTotalGeral():
+def getTotalMes():
 	total = 0  
 	for target in targets:
 		valor = get(target,[oid], hlapi.CommunityData('public'))
@@ -67,3 +67,15 @@ def getTotalGeral():
 
 
 
+def getTotalGeral():
+	total = 0  
+	for target in targets:
+		valor = get(target,[oid], hlapi.CommunityData('public'))
+		if not valor:
+			print "impressora nao respondeu"
+		else:
+			print valor
+			total += valor[0][oid]
+
+	totalGeral = total
+	return totalGeral
