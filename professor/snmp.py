@@ -7,7 +7,20 @@ def construct_object_types(list_of_oids):
         object_types.append(hlapi.ObjectType(hlapi.ObjectIdentity(oid)))
     return object_types
 
+def cast(value):
+    try:
+        return int(value)
+    except (ValueError, TypeError):
+        try:
+            return float(value)
+        except (ValueError, TypeError):
+            try:
+                return str(value)
+            except (ValueError, TypeError):
+                pass
+    return value
 
+    
 def fetch(handler, count):
     result = []
     for i in range(count):
