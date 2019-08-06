@@ -8,4 +8,6 @@ class Command(BaseCommand):
     def handle(self, *args, **kwargs):
    		professores = Usuario.objects.filter(tipo="professor")
    		professores.update(quantidade_atual=0)
+
+   		
    		
