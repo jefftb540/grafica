@@ -49,7 +49,7 @@ def get(target, oids, credentials, port=161, engine=hlapi.SnmpEngine(), context=
         context,
         *construct_object_types(oids)
     )
-    return fetch(handler, 1)
+    return fetch(handler, 1)[0]
 
 def getTotalGeral():
 	total = 0  
