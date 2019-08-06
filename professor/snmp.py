@@ -54,10 +54,14 @@ def get(target, oids, credentials, port=161, engine=hlapi.SnmpEngine(), context=
 def getTotalGeral():
 	total = 0  
 	for target in targets:
-		print get(target,[oid], hlapi.CommunityData('public'))
-		#total += get(target,[oid], hlapi.CommunityData('public'))
+		valor = get(target,[oid], hlapi.CommunityData('public'))
+		if not valor:
+			print "impressora nao respondeu"
+		else:
+			total += int(valor[oid], 10)
 
-	totalGeral = Contagem.objects.latest('contagem') - total
+	instance = Contagem.objects.last()
+	totalGeral = total - instance.contagem
 	return totalGeral
 
 
