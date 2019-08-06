@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'e-0!2f*-7iqf!mf=%8g=q$7_v^#ig=c+$xh)x)@hpkxxy7zn=3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['10.182.0.12', 'catarina.ifrn.local', '127.0.0.1']
 
