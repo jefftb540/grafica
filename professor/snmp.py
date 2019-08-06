@@ -1,7 +1,7 @@
 from pysnmp import hlapi
 from models import Contagem
 targets = ['192.168.193.23', '192.168.193.20', '192.168.193.15', '192.168.193.21', '192.168.193.18', '192.168.193.17', '192.168.193.5', '192.168.193.19', '192.168.193.16', '192.168.193.23'] 
-oid = '.1.3.6.1.2.1.43.10.2.1.4.1.1'
+oid = '1.3.6.1.2.1.43.10.2.1.4.1.1'
 def construct_object_types(list_of_oids):
     object_types = []
     for oid in list_of_oids:
@@ -59,8 +59,7 @@ def getTotalGeral():
 			print "impressora nao respondeu"
 		else:
 			print valor
-			gambiarra = valor[0]
-			total += gambiarra[oid]
+			gambiarra = valor[0][oid]
 
 	instance = Contagem.objects.last()
 	totalGeral = total - instance.contagem
