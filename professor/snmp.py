@@ -33,6 +33,7 @@ def fetch(handler, count):
                     items[str(var_bind[0])] = cast(var_bind[1])
                 result.append(items)
             else:
+            	print "impressora não respondeu"
                 #raise RuntimeError('Got SNMP error: {0}'.format(error_indication))
         except StopIteration:
             break
