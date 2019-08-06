@@ -11,6 +11,7 @@ from django.contrib import messages
 from django.core.urlresolvers import reverse
 from django.contrib.auth.forms import AdminPasswordChangeForm
 from django.contrib.auth import update_session_auth_hash
+from pysnmp import hlapi
 from . import snmp
 
 
