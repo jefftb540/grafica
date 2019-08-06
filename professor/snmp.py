@@ -1,6 +1,6 @@
 from pysnmp import hlapi
-
-
+tagets = ['192.168.191.23', '192.168.191.20', '192.168.191.15', '192.168.191.21', '192.168.191.18','192.168.191.17', '192.168.191.5', '192.168.191.19', '192.168.191.16', '192.168.191.23']
+oid = '.1.3.6.1.2.1.43.10.2.1.4.1.1'
 def construct_object_types(list_of_oids):
     object_types = []
     for oid in list_of_oids:
@@ -20,7 +20,7 @@ def cast(value):
                 pass
     return value
 
-    
+
 def fetch(handler, count):
     result = []
     for i in range(count):
@@ -48,5 +48,14 @@ def get(target, oids, credentials, port=161, engine=hlapi.SnmpEngine(), context=
         *construct_object_types(oids)
     )
     return fetch(handler, 1)[0]
+
+def getTotalGeral:
+	total = 0  
+	for target in targets:
+		total += snmp.get(target,[oid], hlapi.CommunityData('public'))[0]
+
+	totalGeral = Contagem.objects.latest('contagem') - total
+	return totalGeral
+
 
 

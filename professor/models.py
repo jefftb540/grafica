@@ -67,3 +67,6 @@ class Solicitacao(models.Model):
 	grafica_message_author = models.ForeignKey(Usuario, related_name="grafica_message_author", null=True, default=0)
 
 	
+class Contagem(models.Model):
+	data = models.DateTimeField(auto_now_add=True)
+	contagem = models.IntegerField()
