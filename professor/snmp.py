@@ -1,6 +1,6 @@
 from pysnmp import hlapi
 
-hlapi.CommunityData('public'))
+hlapi.CommunityData('public')
 
 def construct_object_types(list_of_oids):
     object_types = []
