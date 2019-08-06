@@ -49,7 +49,7 @@ def get(target, oids, credentials, port=161, engine=hlapi.SnmpEngine(), context=
     )
     return fetch(handler, 1)[0]
 
-def getTotalGeral:
+def getTotalGeral():
 	total = 0  
 	for target in targets:
 		total += snmp.get(target,[oid], hlapi.CommunityData('public'))[0]
