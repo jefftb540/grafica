@@ -10,7 +10,7 @@ class Command(BaseCommand):
    		professores = Usuario.objects.filter(tipo="professor")
    		professores.update(quantidade_atual=0)
    		instance = Contagem.objects.create(contagem= snmp.getTotalGeral())
-   		instance.save
+   		instance.save()
 
 
 
