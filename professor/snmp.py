@@ -59,7 +59,7 @@ def getTotalGeral():
 			print "impressora nao respondeu"
 		else:
 			print valor
-			gambiarra = valor[0][oid]
+			total += valor[0][oid]
 
 	instance = Contagem.objects.last()
 	totalGeral = total - instance.contagem
